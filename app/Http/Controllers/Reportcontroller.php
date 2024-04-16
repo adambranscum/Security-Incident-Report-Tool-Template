@@ -46,7 +46,7 @@ class Reportcontroller extends Controller
 
         $new = Reports::create($report);
 
-        $adminEmail = [$request->input('staff'), '_SuperGroup@lamanlibrary.org'];
+        $adminEmail = [$request->input('staff'), 'email@email.com'];
 
         Mail::to($adminEmail)->send(new ReportMail($request));
 
